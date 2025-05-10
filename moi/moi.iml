@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="jar://$MODULE_DIR$/lib/derby.jar!/" />
+    <content url="jar://$MODULE_DIR$/lib/derbynet.jar!/" />
+    <content url="jar://$MODULE_DIR$/lib/derbyoptionaltools.jar!/" />
+    <content url="jar://$MODULE_DIR$/lib/derbyrun.jar!/" />
+    <content url="jar://$MODULE_DIR$/lib/derbyshared.jar!/" />
+    <content url="jar://$MODULE_DIR$/lib/derbytools.jar!/" />
+  </component>
+</module>

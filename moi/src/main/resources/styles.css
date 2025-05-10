@@ -1,0 +1,199 @@
+/* CSS cho toàn ứng dụng */
+* {
+    -fx-font-family: "Arial", sans-serif; /* Chọn font chữ phù hợp */
+    -fx-font-size: 14px;
+}
+
+.root {
+    -fx-background-color: #f0f0f0; /* Màu nền chung cho ứng dụng */
+}
+
+/* CSS cho phần sidebar */
+.sidebar {
+    -fx-background-color: #333; /* Màu nền sidebar */
+    -fx-padding: 10px;
+    -fx-alignment: top-left;
+    -fx-spacing: 10px;
+    -fx-pref-width: 200px; /* Độ rộng sidebar */
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #fff; /* Màu chữ cho button menu */
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+    -fx-border-radius: 0; /* Loại bỏ viền bo tròn */
+    -fx-pref-width: 180px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #4CAF50; /* Màu nền khi hover */
+}
+
+.sidebar-button:pressed {
+    -fx-background-color: #388E3C; /* Màu nền khi nhấn */
+}
+
+/* CSS cho phần nội dung chính */
+.content-area {
+    -fx-background-color: #fff; /* Màu nền vùng nội dung chính */
+    -fx-padding: 20px;
+}
+
+/* CSS cho tiêu đề trang */
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* Màu chữ tiêu đề */
+    -fx-margin-bottom: 20px;
+}
+
+/* CSS cho bảng dữ liệu (TableView) */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-fixed-cell-size: 30;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0; /* Màu nền header bảng */
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header {
+    -fx-alignment: center;
+}
+
+.table-view .table-cell {
+    -fx-alignment: center;
+    -fx-padding: 5px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #b0e0e6; /* Màu nền khi chọn hàng */
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+/* CSS cho form nhập liệu */
+.form-container {
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+}
+
+.form-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #2c3e50;
+    -fx-alignment: center-left;
+    -fx-min-width: 120px;
+}
+
+.text-field {
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #4CAF50;
+    -fx-shadow-radius: 0;
+    -fx-shadow-offset-x: 0;
+    -fx-shadow-offset-y: 0;
+}
+
+.date-picker {
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.date-picker:focused {
+    -fx-border-color: #4CAF50;
+    -fx-shadow-radius: 0;
+    -fx-shadow-offset-x: 0;
+    -fx-shadow-offset-y: 0;
+}
+
+
+/* CSS cho các nút */
+.button {
+    -fx-background-color: #4CAF50; /* Màu xanh lá cây */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 5);
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Màu xanh lá cây đậm hơn khi hover */
+}
+
+.button:pressed {
+    -fx-background-color: #388E3C; /* Màu xanh lá cây sẫm hơn khi nhấn */
+    -fx-effect: null;
+}
+
+.red-button {
+    -fx-background-color: #e53935;  /* Màu đỏ */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 5);
+}
+
+.red-button:hover {
+    -fx-background-color: #c62828; /* Màu đỏ đậm hơn khi hover */
+}
+
+.red-button:pressed {
+    -fx-background-color: #b71c1c; /* Màu đỏ sẫm hơn khi nhấn */
+    -fx-effect: null;
+}
+
+/* CSS cho các thông báo */
+.alert {
+    -fx-background-color: #fff;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+}
+
+.alert-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.alert-content {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+.alert-button-area {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
