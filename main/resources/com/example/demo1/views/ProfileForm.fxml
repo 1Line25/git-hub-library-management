@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="450.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.application.ProfileFormController">
+    <children>
+        <Label layoutX="188.0" layoutY="25.0" text="Thông tin">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <GridPane layoutX="50.0" layoutY="67.0" prefHeight="250.0" prefWidth="350.0">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="100.0"/>
+                <ColumnConstraints prefWidth="250.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+            </rowConstraints>
+            <children>
+                <Label text="ID" />
+                <TextField fx:id="idField" GridPane.columnIndex="1" />
+
+                <Label text="Họ" GridPane.rowIndex="1" />
+                <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Tên" GridPane.rowIndex="2" />
+                <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Giới tính" GridPane.rowIndex="3" />
+                <TextField fx:id="genderField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Sinh nhật" GridPane.rowIndex="4" />
+                <DatePicker fx:id="birthDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Email" GridPane.rowIndex="5" />
+                <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label text="Địa chỉ" GridPane.rowIndex="6" />
+                <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <Label text="Tên đăng nhập" GridPane.rowIndex="7" />
+                <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            </children>
+        </GridPane>
+
+        <Label layoutX="50.0" layoutY="322.0" text="Mật khẩu" />
+        <TextField fx:id="passwordField" layoutX="150.0" layoutY="318.0" prefWidth="250.0" />
+
+        <Button fx:id="updateButton" layoutX="193.0" layoutY="349.0" mnemonicParsing="false" text="Cập nhật"
+                onAction="#handleUpdateProfile" />
+
+        <Label fx:id="profileStatusLabel" layoutX="50.0" layoutY="370.0" textFill="RED"/>
+    </children>
+</AnchorPane>

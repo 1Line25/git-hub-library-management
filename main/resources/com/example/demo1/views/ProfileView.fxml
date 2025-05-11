@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="550.0" prefWidth="440.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 4);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.application.ProfileFormController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <spacing>20.0</spacing>
+
+    <!-- Optional Profile Picture -->
+    <ImageView fx:id="profileImage" fitHeight="80" fitWidth="80" style="-fx-background-radius: 50%;" />
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #3b82f6;" text="Hồ sơ cá nhân" />
+    <GridPane hgap="15" style="-fx-padding: 20;" vgap="15">
+        <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="idField" prefHeight="25.0" prefWidth="294.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Họ tên:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="hoTenField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Giới tính:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="gioiTinhField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Ngày sinh:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <DatePicker fx:id="ngaySinhPicker" prefHeight="25.0" prefWidth="226.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="emailField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label text="Địa chỉ:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="diaChiField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <Button fx:id="luuButton" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-background-radius: 5;" text="Lưu" />
+</VBox>

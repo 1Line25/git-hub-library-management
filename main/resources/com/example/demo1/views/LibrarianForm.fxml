@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="622.0" prefWidth="1107.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 4);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.controllers.LibrarianFormController">
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #3b82f6;" text="Quản lý thủ thư" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Mã thủ thư:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="maThuThuField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Họ tên:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <TextField fx:id="hoTenField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <Label text="Ngày sinh:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <DatePicker fx:id="ngaySinhPicker" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Giới tính:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <ComboBox fx:id="gioiTinhComboBox" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+        <Label text="Số điện thoại:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="soDienThoaiField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <TextField fx:id="emailField" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Label text="Ngày vào làm:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <DatePicker fx:id="ngayVaoLamPicker" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button fx:id="themButton" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-background-radius: 5;" text="Thêm" />
+        <Button style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-background-radius: 5;" text="Xóa" fx:id="xoaButton" />
+        <Button fx:id="lamMoiButton" style="-fx-background-color: #e7e7e7; -fx-text-fill: black; -fx-background-radius: 5;" text="Làm mới" />
+    </HBox>
+
+    <TableView fx:id="librarianTable" prefHeight="304.0" prefWidth="742.0" style="-fx-border-color: #e0e0e0; -fx-border-width: 1;">
+        <columns>
+            <TableColumn fx:id="maThuThuColumn" prefWidth="88.0" text="Mã" />
+            <TableColumn fx:id="hoTenColumn" prefWidth="162.0" text="Họ tên" />
+            <TableColumn fx:id="ngaySinhColumn" prefWidth="131.0" text="Ngày sinh" />
+            <TableColumn fx:id="gioiTinhColumn" prefWidth="70.0" text="Giới tính" />
+            <TableColumn fx:id="soDienThoaiColumn" prefWidth="132.0" text="SĐT" />
+            <TableColumn fx:id="emailColumn" prefWidth="220.0" text="Email" />
+            <TableColumn fx:id="ngayVaoLamColumn" prefWidth="219.0" text="Vào làm" />
+        </columns>
+    </TableView>
+</VBox>

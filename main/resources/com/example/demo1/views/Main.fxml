@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane prefHeight="819.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.application.MainController">
+
+    <!-- Sidebar -->
+    <left>
+        <VBox fx:id="sideBar" prefHeight="819.0" prefWidth="229.0" spacing="10.0" style="-fx-background-color: #3b82f6; -fx-padding: 10; -fx-alignment: top-center;">
+            <Label prefHeight="55.0" prefWidth="194.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10;">Quản lý thư viện</Label>
+
+            <!-- Buttons -->
+            <Button fx:id="hoSoButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Hồ sơ" />
+            <Button fx:id="quanLyDauSachButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Quản lí đầu sách" />
+            <Button fx:id="quanLySachButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Quản lí sách" />
+            <Button fx:id="quanLyDocGiaButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Quản lí độc giả" />
+            <Button fx:id="quanLyThuThuButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Quản lí thủ thư" />
+            <Button fx:id="quanLyTheThuVienButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Quản lí thẻ thư viện" />
+            <Button fx:id="quanLyTacGiaButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Quản lí tác giả" />
+            <Button fx:id="quanLyPhieuMuonButton" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: center-left;" text="Quản lí phiếu mượn" />
+        </VBox>
+    </left>
+
+    <!-- Center area where the content will be displayed -->
+    <center>
+        <StackPane fx:id="contentArea" />
+    </center>
+
+</BorderPane>

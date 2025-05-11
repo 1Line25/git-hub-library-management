@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="719.0" prefWidth="1231.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 4);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.controllers.LendingSlipFormController">
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #3b82f6;" text="Quản lý phiếu mượn" />
+
+    <HBox spacing="10">
+        <Label text="Mã phiếu mượn:" />
+        <TextField fx:id="maPhieuMuonField" prefWidth="100" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+
+        <Label text="Độc giả:" />
+        <ComboBox fx:id="docGiaComboBox" prefWidth="150" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+
+        <Label text="Sách:" />
+        <ComboBox fx:id="sachComboBox" prefWidth="150" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+
+        <Label text="Số lượng:" />
+        <TextField fx:id="soLuongField" prefWidth="60" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+
+        <Label text="Ngày mượn:" />
+        <DatePicker fx:id="ngayMuonPicker" prefWidth="130" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+
+        <Label text="Hạn trả:" />
+        <DatePicker fx:id="hanTraPicker" prefWidth="130" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Button fx:id="themButton" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-background-radius: 5;" text="Thêm" />
+        <Button style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-background-radius: 5;" text="Xóa" fx:id="xoaButton" />
+        <Button fx:id="lamMoiButton" style="-fx-background-color: #e7e7e7; -fx-text-fill: black; -fx-background-radius: 5;" text="Làm mới" />
+    </HBox>
+
+    <TableView fx:id="lendingSlipTable" prefHeight="545.0" prefWidth="1191.0" style="-fx-border-color: #e0e0e0; -fx-border-width: 1;">
+        <columns>
+            <TableColumn fx:id="maPhieuMuonColumn" prefWidth="100" text="Mã phiếu mượn" />
+            <TableColumn fx:id="docGiaColumn" prefWidth="241.0" text="Độc giả" />
+            <TableColumn fx:id="sachColumn" prefWidth="313.0" text="Sách" />
+            <TableColumn fx:id="soLuongColumn" prefWidth="100.0" text="Số lượng" />
+            <TableColumn fx:id="ngayMuonColumn" prefWidth="227.0" text="Ngày mượn" />
+            <TableColumn fx:id="hanTraColumn" prefWidth="208.0" text="Hạn trả" />
+        </columns>
+    </TableView>
+
+</VBox>
